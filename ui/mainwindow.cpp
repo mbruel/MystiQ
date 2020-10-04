@@ -795,8 +795,11 @@ int MainWindow::get_poweroff_behavior()
 bool MainWindow::load_presets()
 {
     // The default preset file is located in <datapath>/presets.xml
-    QString default_preset_file = ":/other/presets.xml";
 
+    QString default_preset_file = ":/other/presets.xml";
+#if defined( Q_OS_WIN )
+    QString local_preset_file = "./presets.xml";
+#else
     QString local_preset_file;
     if (!Constants::getBool("Portable")) { // non-portable app
         // rename local preset file created by older versions of mystiq
@@ -816,6 +819,7 @@ bool MainWindow::load_presets()
         // portable app
         local_preset_file = default_preset_file;
     }
+#endif
 
     QSettings settings;
     bool removeUnavailableCodecs = settings.value("options/hideformats", true).toBool();

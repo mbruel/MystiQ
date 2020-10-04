@@ -103,13 +103,13 @@
             <category>Websites</category>
         </FLVWidescreen>
         <MP4Fast>
-            <label>MP4 h264 2M (Audio copy)</label>
+            <label>MP4 FAST High Quality (h264 2M Audio copy)</label>
             <params>-c:v h264 -b:v 2M -c:a copy </params>
             <extension>mp4</extension>
             <category>MP4</category>
         </MP4Fast>
         <MP4FastWithAudio>
-            <label>MP4 h264 2M mp3 128k</label>
+            <label>MP4 FAST High Quality (h264 2M mp3 128k)</label>
             <params>-c:v h264 -b:v 2M -c:a mp3 -b:128k </params>
             <extension>mp4</extension>
             <category>MP4</category>

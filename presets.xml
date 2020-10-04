@@ -101,7 +101,19 @@
             <params>-vcodec flv -f flv -r 29.97 -aspect 16:9 -b:v 300k -g 160 -cmp dct -subcmp dct -mbd 2 -trellis 1 -ac 1 -ar 22050 -b:a 56k</params>
             <extension>flv</extension>
             <category>Websites</category>
-        </FLVWidescreen>        
+        </FLVWidescreen>
+        <MP4Fast>
+            <label>MP4 h264 2M (Audio copy)</label>
+            <params>-c:v h264 -b:v 2M -c:a copy </params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4Fast>
+        <MP4FastWithAudio>
+            <label>MP4 h264 2M mp3 128k</label>
+            <params>-c:v h264 -b:v 2M -c:a mp3 -b:128k </params>
+            <extension>mp4</extension>
+            <category>MP4</category>
+        </MP4FastWithAudio>
         <MP4HighQuality>
             <label>MP4 High Quality</label>
             <params>-crf 35.0 -vcodec libx264 -acodec aac -ar 48000 -b:a 128k -coder 1 -flags +loop -cmp +chroma -partitions +parti4x4+partp8x8+partb8x8 -me_method hex -subq 6 -me_range 16 -g 250 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -b_strategy 1 -strict -2</params>

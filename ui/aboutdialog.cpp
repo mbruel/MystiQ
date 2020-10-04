@@ -60,6 +60,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
                 ? tr("Portable") : "")
          + "<br>"
          /*: Qt version */
+         + tr("Version modified by mbruel ") + url("https://github.com/mbruel/MystiQ") + "<br>"
          + tr("Compiled with Qt %1").arg(QT_VERSION_STR)
 #ifdef USE_LIBNOTIFY /*: libnotify version */
                 + "<br>" + tr("Compiled with libnotify %1")
